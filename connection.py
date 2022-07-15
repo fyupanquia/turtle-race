@@ -29,7 +29,7 @@ class DataBase:
 
     def saveLog(self, bet, winner):
         sql = "INSERT INTO LOG SET BET='{}', WINNER='{}', CREATED_AT=NOW()".format(bet, winner)
-
+        
         try:
             self.cursor.execute(sql)
             self.connection.commit()
